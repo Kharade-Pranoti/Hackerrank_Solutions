@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+static boolean flag; // to set the flag to 0 or 1 based on the condition
+static int B;        // breadth of a parallelogram
+static int H;        // height of a parallelogram
+
+static{
+    Scanner sc = new Scanner(System.in);  // taking standard input for breadth and height
+     B = sc.nextInt();                      
+     H = sc.nextInt();
+
+    // check if the value of breadth and height is greater than zero
+    // if value is greater than zero set the flag to 1 else print the exception on the console
+    if(B > 0 && H > 0){
+        flag = true;
+    }else{
+        
+    System.out.println("java.lang.Exception: Breadth and height must be positive");
+        
+    } // end of if else block
+    
+    sc.close();  // closes the scanner
+
+}// end of static block
+
+public static void main(String[] args){
+    // if the flag is set to 1 then only the below if block will be executed
+		if(flag){
+			int area=B*H;
+			System.out.print(area);
+		}
+		
+	}//end of main
+
+}//end of class
+
