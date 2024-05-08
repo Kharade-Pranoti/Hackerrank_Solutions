@@ -10,10 +10,15 @@ class Result {
 
     public static String findDay(int month, int day, int year) {
 
+// Creating an array named days of type String to store the days of the week
          String days [] = {"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", 
         "THURSDAY", "FRIDAY", "SATURDAY"};
-        
+
+// Calendar.getInstance() returns the calendar using the default time zone and locale.
         Calendar calendar = Calendar.getInstance();
+
+// Sets the values for the calendar fields - year, month and day of the week
+// month is month-1 because the starting month which is January starts from 0
         calendar.set(year, month -1, day);
         int a = calendar.get(Calendar.DAY_OF_WEEK);
         return days[a - 1];
