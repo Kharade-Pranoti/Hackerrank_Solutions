@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        
+        // Remove the extra spaces from the string
+        s = s.trim();
+        
+        String token[] = s.split("[^A-Za-z]+");
+        
+        // count the length of the string and print it
+        if(s.length() == 0) {
+            System.out.println(0);
+        }else {
+            System.out.println(token.length);
+        }
+
+        for(String word : token){
+            System.out.println(word);
+        }
+                
+        scan.close();
+    }
+}
+
